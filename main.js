@@ -1,3 +1,5 @@
+/* main code */
+
 const localStorageKey = "to-do-list-gn"
 
 function novatarefa() {
@@ -27,6 +29,8 @@ function mostrartarefas() {
   }
 }
 
+/* Função para remover itens das tarefas */
+
 function removeItem(data) {
   var values = JSON.parse(localStorage.getItem(localStorageKey) || "[]");
   var index = values.findIndex(x => x.name == data);
@@ -37,5 +41,32 @@ function removeItem(data) {
 
 mostrartarefas();
 
+/* tipos de modo da pagina*/
+
+  var mudartitulo=document.getElementById("h1")
+  var placeholder=document.getElementById("novatarefa")
+  
+
+  function modoportugues(){
+    mudartitulo.innerHTML=`Lista de Tarefas | MG`
+    mudartitulo.style.fontSize = "2.5rem";
+    placeholder.setAttribute("placeholder", "Digite aqui a nova tarefa");
+
+  }
+
+  function modoingles(){
+    mudartitulo.innerHTML=`To do List | MG`
+    placeholder.setAttribute("placeholder", "Enter a new task");
+  }
 
 
+
+/* Adiconar tarefa ao carregar no Enter*/
+
+  document.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+      novatarefa();
+    }
+  });
+  
+  botao.addEventListener("click", novatarefa);

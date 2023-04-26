@@ -10,18 +10,41 @@ body{
     font-family: "Poppins";
 }
 
+header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 6%;
+    margin-top: 3%;
+    display: flex;
+    gap: 1rem;
+}
+
+header img{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+header img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+
+
 .main{
     background: url(imagens/fundo.webp);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     color: black;
-    height: 100vh;
+    height: 100vh ;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 3.125rem;
+    min-height: 100vh;
 }
 
 .container {
@@ -140,6 +163,25 @@ body{
 #btn-ok:hover{
     transform: scale(1.2);
     transition: transform 0.2s ease-in-out;
+  }
+
+  footer{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 5%;
+    display: flex;
+    gap: 1.1rem;
+
+  }
+
+  footer img {
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  footer img:hover {
+    transform: scale(1.2);
   }
 
   @media screen and (max-width: 494px) {   
