@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&family=Josefin+Sans&family=Montserrat&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+}
+
+.main{
+    background: url(imagens/fundo.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.125rem;
+    height: auto;
+    width: 30rem;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+  .container:hover {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+  }
+
+.main h1{
+    font-size: 3.5rem;
+    animation: animacao-titulo 4s infinite;
+}
+
+@keyframes animacao-titulo {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
+.adicionar-tarefa{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#novatarefa{
+    border: none;
+    font-size: 1rem;
+    outline: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+ }
+
+ .botao-nova-tarefa{
+    background-color: rgb(156, 141, 141);
+    color: white;
+    border: none;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .botao-nova-tarefa:hover {
+    background-color: #f44336;
+    transform: scale(1.1);
+}
+
+.conteudo{
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    
+}
+
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.4rem;
+    margin-left: 1.5%;
+}
+
+#to-do-list li {
+    list-style: none;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5.625rem;
+   
+    
+}
+
+#btn-ok{
+    border: none;
+    padding: 4px;
+    color: white;
+    background-color: green;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#btn-ok:hover{
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width: 494px) {   
+    
+    .main h1{
+        font-size: 1.6rem;
+        animation: animacao-titulo 4s infinite;
+    }
+
+    #novatarefa{
+        border: none;
+        font-size: 0.6rem;
+        outline: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: center;
+     }
+        
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.125rem;
+    height: auto;
+    width: 20rem;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+}
+
+@media screen and (min-width: 0px) and (max-width: 334px) {            
+    .main h1{
+        font-size: 1.3rem;
+        animation: animacao-titulo 4s infinite;
+    }
+
+    #novatarefa{
+        border: none;
+        outline: none;
+        padding: 1rem;
+        border-radius: 1rem;
+        text-align: center;
+        font-size: 7.8px;
+     }
+
+     .botao-nova-tarefa{
+        background-color: rgb(156, 141, 141);
+        color: white;
+        border: none;
+        border-radius: 1.5rem;
+        cursor: pointer;
+        width: 2.0rem;
+        height: 2.0rem;
+        transition: all 0.3s ease-in-out;
+     }
+        
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.125rem;
+    height: auto;
+    width: 15rem;
+    border: none;
+    padding: 2rem;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+#to-do-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.4rem;
+    margin-left: 20%;
+}
+
+#to-do-list li {
+    list-style: none;
+    font-size: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 5.625rem;
+    
+}
+
+#btn-ok{
+    border: none;
+    padding: 4px;
+    color: white;
+    background-color: green;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+    }
+    
+
+
+
+
+
